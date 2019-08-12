@@ -8,7 +8,7 @@ export class Home extends React.Component {
         this.state = {
             age: props.initialAge,
             status: 0,
-            homeLink: "Changed Link"
+            homeLink: props.initialLinkName
         }
 
         // Just to observe Virtual DOM updating behavior.
@@ -31,6 +31,12 @@ export class Home extends React.Component {
         this.props.changeLink(this.state.homeLink);
     }
 
+    onHandleChange(event) {
+        this.setState({
+            homeLink: event.target.value
+        });
+    }
+
     render() {
         return(
             <div>
@@ -43,6 +49,7 @@ export class Home extends React.Component {
                 <hr />
                 <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
                 <hr />
+                <input type="text" value={this.state.homeLink} onChange={(event) => this.onHandleChange(event)}/>
                 <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header Link</button>
             </div>
         );
@@ -52,5 +59,6 @@ export class Home extends React.Component {
 Home.propTypes = {
     name: PropTypes.string,
     initialAge: PropTypes.number,
-    greet: PropTypes.func
+    greet: PropTypes.func,
+    initialLinkName: PropTypes.string
 }
