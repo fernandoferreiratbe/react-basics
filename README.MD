@@ -1,6 +1,6 @@
 # ReactJS Basics
 
- This repository accompanies my ReactJS - Basics YouTube Series.
+ This repository accompanies ReactJS - Basics YouTube Series.
 
  # Note
  Thanks to Academind / @maxedapps
