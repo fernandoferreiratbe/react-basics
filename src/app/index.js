@@ -20,7 +20,7 @@ class App extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home name={"Fernando"} age={32} user={user} />
+                        <Home name={"Fernando"} initialAge={32} user={user} />
                     </div>
                 </div>
                 
